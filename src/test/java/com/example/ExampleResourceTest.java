@@ -12,10 +12,9 @@ public class ExampleResourceTest {
     @Test
     public void testHelloEndpoint() {
         given()
-                .when().get("/hello")
+                .when().get("/hello/1")
                 .then()
-                .statusCode(200)
-                .body(is("Hello from RESTEasy Reactive"));
+                .body(is("{\"id\":1,\"field\":\"cool\",\"subSet\":[]}"));
     }
 
 }
