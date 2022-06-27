@@ -12,6 +12,6 @@ public class DbSeed {
     public void loadAdminUser(@Observes StartupEvent event) {
         var u = new MyEntity();
         u.field = "cool";
-        u.persistAndFlush().await().indefinitely();
+        u.persistAndFlush();
     }
 }

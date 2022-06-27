@@ -8,7 +8,6 @@ import javax.ws.rs.core.Response;
 public class JacksonErrorMapper {
     @ServerExceptionMapper
     public Response handleError(JsonMappingException e) {
-
         return Response.status(400).entity("JacksonErrorMapper").build();
     }
 }
